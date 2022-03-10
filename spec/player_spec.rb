@@ -1,3 +1,5 @@
+require 'player'
+
 describe Player do
     kaju = Player.new('Kaju')
     badam = Player.new('Badam')
@@ -15,12 +17,12 @@ describe Player do
         end
     end
 
-    describe ".attack" do
-        it 'damages the player' do
-            expect(badam).to receive(:receive_damage)
-            kaju.attack(badam)
-        end
-    end
+    # describe ".attack" do
+    #     it 'damages the player' do
+    #         expect(badam).to receive(:receive_damage)
+    #         kaju.attack(badam)
+    #     end
+    # end
 
     describe ".receive_damage" do
         it 'reduce the hit_points by 10' do
